@@ -1,0 +1,229 @@
+PYTHON-LAB-EXPERIMENT-2
+PYTHON PROGRAMMING LAB EXPERIMENT
+
+Aim
+To develop a Python program to evaluate a cricket player's batting, bowling, fielding, and overall all-rounder performance based on the player's statistics.
+
+Algorithm
+1.Start
+
+2.Enter the player's details.
+
+3.Calculate the batting strike rate.
+
+4.Calculate the bowling economy rate.
+
+5.Check and display the batting performance.
+
+6.Check and display the bowling performance.
+
+7.Check and display the fielding performance.
+
+8.Decide the player's overall all-rounder performance.
+
+9.Display the final result.
+
+10.Repeat the process for another player.
+
+11.Stop.
+
+CODE
+
+while True:
+
+
+print("\n******** PLAYER DETAILS ********")
+
+
+n=input("Enter the Name")
+
+
+r = int(input("Enter the run scored: "))
+
+
+b = int(input("Enter the ball faced: "))
+
+
+f= int(input("Enter the total fours hit: "))
+
+
+s = int(input("Enter the total sixes hit: "))
+
+
+w = int(input("Enter the wickets secured: "))
+
+
+runs_con = int(input("Enter the runs conceded: "))
+
+
+overs_ball = int(input("Enter the total overs bowled: "))
+
+
+c = int(input("Enter the catches taken: "))
+
+
+print("**
+
+
+print("THE PLAYER NAME",(n)) bs =r/b* 100 print("Batting strike rate:", bs)
+
+
+be = runs con/overs ball print("Bowling economy rate:", be)
+
+
+print("*
+
+
+print("******** BATTING PERFORMANCE ********")
+
+
+if r>= 50 and bs >= 120:
+
+
+batting = "excellent"
+
+
+print("Excellent batter")
+
+
+elifr>= 30 and bs >= 100:
+
+
+batting = "good" print("Good batter") elifr>= 20:
+
+
+else:
+
+
+batting = "average" print("Average batter")
+
+
+batting = "poor" print("Poor batter")
+
+
+print("******** BOWLING PERFORMANCE ********")
+
+
+if w>=3 and be <= 6: bowling = "excellent" print("Excellent bowler") elif w>= 2 and be <= 8: bowling = "good" print("Good bowler") elif w>= 1:
+
+
+bowling = "average" print("Average bowler")
+
+
+else:
+
+
+bowling = "poor"
+
+
+print("Poor bowler")
+
+
+print("******** FIELDING PERFORMANCE ********")
+
+
+if c>= 2:
+
+
+fielding = "outstanding" print("Outstanding fielder")
+
+
+else:
+
+
+fielding = "active"
+
+
+print("Active fielder")
+
+
+fielding = "needs improvement" print("Needs improvement")
+
+
+print("******** OVERALL ALL-ROUNDER DECISION ********")
+
+
+if batting == "excellent" and bowling == "excellent":
+
+
+print("Star All-Rounder")
+
+
+elif batting == "good" and bowling == "good":
+
+
+print("Strong All-Rounder")
+
+
+elif batting == "good" or bowling == "good":
+
+
+print("Supporting All-Rounder)
+
+OUTPUT
+
+
+******** PLAYER DETAILS ********
+
+
+Enter the Name:sreyas
+
+
+Enter the run scored: 150
+
+
+Enter the ball faced: 100
+
+
+Enter the total fours hit: 10
+
+
+Enter the total sixes hit: 16
+
+
+Enter the wickets secured: 4
+
+
+Enter the runs conceded: 59
+
+
+Enter the total overs bowled: 4
+
+
+Enter the catches taken: 5
+
+
+*******
+
+
+THE PLAYER NAME sreyas
+
+
+Batting strike rate: 150.0
+
+
+Bowling economy rate: 14.75
+
+
+*******************************
+
+
+******** BATTING PERFORMANCE ********
+
+
+Excellent batter
+
+
+******** BOWLING PERFORMANCE ******** 
+
+Average bowler
+
+
+******** FIELDING PERFORMANCE ********
+
+Outstanding fielder
+
+******** OVERALL ALL-ROUNDER DECISION ********
+
+
+Needs Improvement
