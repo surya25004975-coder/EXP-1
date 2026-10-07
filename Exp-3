@@ -1,0 +1,138 @@
+# Exp-3
+
+Aim
+
+To write a Python program to implement various string operations.
+
+
+Algorithm
+
+Start the program.
+
+Create a string variable
+
+Display the original string.
+
+
+Find and display the length of the string.
+
+
+Convert the string to uppercase and display it.
+
+
+Convert the string to lowercase and display it.
+
+
+Access and display the character at index 6.
+
+
+Find the position of the word "Python" in the string.
+
+
+Extract and display a substring using slicing.
+
+
+Replace "Python" with "World" and display the result.
+
+
+Check whether "Python" is present in the string.
+
+
+Concatenate another string to the original string and display it.
+
+
+Create a string with extra spaces and remove leading and trailing spaces using strip().
+
+
+Display the trimmed string.
+
+
+Stop the program.
+
+
+CODE
+
+
+s = "Hello Python"
+
+
+print("Original String:", s)
+
+
+print("Length:", len(s))
+
+
+
+print("Uppercase:", s.upper())
+
+
+print("Lowercase:", s.lower())
+
+
+print("Character at index 6:", s[6])
+
+
+print("Position of python:", 
+
+
+s.find("Python"))
+
+
+print("Slice:", s[6:])
+
+
+print("Replace:", s.replace("Python", "World"))
+
+
+print(s)
+
+
+print("Contains Python:", "Python" in s)
+
+
+print("Concatenation:", s + " Programming")
+
+
+s2 = "  Hello World  "
+
+print("Trim:", s2.strip())
+
+
+
+OUTPUT 
+
+
+Original String: Hello Python
+
+
+Length: 12
+
+
+Uppercase: HELLO PYTHON
+
+
+Lowercase: hello python
+
+
+Character at index 6: P
+
+
+Position of python: 6
+
+
+Slice: Python
+
+
+Replace: Hello World
+
+
+Hello Python
+
+
+Contains Python: True
+
+
+Concatenation: Hello Python Programming
+
+
+Trim: Hello World
