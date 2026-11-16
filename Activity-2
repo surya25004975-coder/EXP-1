@@ -1,0 +1,35 @@
+def add_item(cart, name, price, quantity):
+ """Validate and add an item to the cart."""
+ if not isinstance(name, str) or not name.strip():
+ raise ValueError("Item name cannot be empty.")
+ if not isinstance(price, (int, float)) or price <= 0:
+ raise ValueError("Price must be greater than zero.") if not isinstance(quantity, int) or quantity <= 0:
+ raise ValueError("Quantity must be a positive whole number.")
+ cart.append({"name": name.strip().title(),
+ "price": round(float(price), 2),
+ "quantity": quantity})
+ return cart
+def calculate_bill(cart):
+ """Calculate line amounts and the subtotal."""
+ if not cart:
+ raise ValueError("The cart is empty.")
+ bill_items = []
+ subtotal = 0.0
+ for item in cart:
+ amount = item["price"] * item["quantity"]
+ subtotal += amount
+ bill_items.append({"name": item["name"],
+ "price": item["price"],
+ "quantity": item["quantity"],
+ "amount": round(amount, 2)})
+ return bill_items, round(subtotal, 2)
+def apply_discount(subtotal, discount_percent=0):
+ """Apply a percentage discount and return discount and final amount."""
+ if not isinstance(subtotal, (int, float)) or subtotal < 0:
+ raise ValueError("Subtotal must be non-negative.")
+ if not isinstance(discount_percent, (int, float)):
+ raise ValueError("Discount must be numeric.")
+ if not 0 <= discount_percent <= 100:
+ raise ValueError("Discount must be between 0 and 100.")
+ discount_amount = subtotal * discount_percent / 100
+ return round(discount_amount, 2), round(subtotal - discount_amount, 2)
