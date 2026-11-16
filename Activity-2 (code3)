@@ -1,0 +1,23 @@
+from canteen_pkg import add_item, calculate_bill, apply_discount
+def main():
+ cart = []
+ add_item(cart, "Veg Sandwich", 60, 2)
+ add_item(cart, "Lemon Juice", 35, 1)
+ add_item(cart, "Idli", 40, 2)
+ bill_items, subtotal = calculate_bill(cart)
+ discount_percent = 10
+ discount_amount, final_amount = apply_discount(subtotal, discount_percent)
+ print("\n========== CANTEEN BILL ==========")
+ print(f"{'Item':<20}{'Qty':>5}{'Price':>10}{'Amount':>12}")
+ print("-" * 47)
+ for item in bill_items:
+ print(f"{item['name']:<20}{item['quantity']:>5}"
+ f"{item['price']:>10.2f}{item['amount']:>12.2f}")
+ print("-" * 47)
+ print(f"{'Subtotal':>35}: Rs. {subtotal:.2f}")
+ print(f"{'Discount (10%)':>35}: Rs. {discount_amount:.2f}")
+ print(f"{'Final Amount':>35}: Rs. {final_amount:.2f}")
+ print("==================================")
+ print("Thank you. Visit again!")
+if __name__ == "__main__":
+ main()
